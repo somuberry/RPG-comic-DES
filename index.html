@@ -18,14 +18,10 @@ $(document).ready(function(){
 .panel1 {
 	z-index: 0;
 	position: absolute;
-	width: 1440px;
-	margin: auto;
 	}
 .panel2 {
 	z-index: 1;
 	position: relative;
-	width: 1440px;
-	margin: auto;
 	}
 .panel-latent {
 	visibility: hidden;
@@ -33,7 +29,9 @@ $(document).ready(function(){
 .panel-active{
 	visibility: visible;
 	}	
-}
+.img {
+	max-width: 500px;
+	}
 </style>
 </head>
 <body>
@@ -41,9 +39,9 @@ $(document).ready(function(){
 <button id="killhim">Kill Him</button>
 <button id="sparehim">Spare Him</button>
 <div id="killedhim" class="panel-latent panel1">
-	<img src="deadman.jpg"></div>
+	<img class="img" src="deadman.jpg"></div>
 <div id="sparedhim" class="panel-latent panel2">
-	<img src="livingman.jpg"></div>
+	<img class="img" src="livingman.jpg"></div>
 	
 </body>
 </html>
