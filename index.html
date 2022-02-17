@@ -18,10 +18,14 @@ $(document).ready(function(){
 .panel1 {
 	z-index: 0;
 	position: absolute;
+	width: 1440px;
+	margin: auto;
 	}
 .panel2 {
 	z-index: 1;
 	position: relative;
+	width: 1440px;
+	margin: auto;
 	}
 .panel-latent {
 	visibility: hidden;
@@ -44,47 +48,3 @@ $(document).ready(function(){
 </body>
 </html>
 
-
-<!--<html>
-<head>
-<script src="jquery-3.6.0.js"></script>
-
-<script>
-$("#killhim").click(function(){ 
-	$("#killedhim").addClass("panel-active");
-	$("#killedhim").removeClass("panel-latent");
-	});
-$("#sparehim").click(function(){ 
-	$("#sparedhim").addClass("panel-active"); 
-	$("#sparedhim").removeClass("panel-latent");
-	});
-</script>
-
-<style>
-.panel1 {
-	z-index: 0;
-	position: absolute;
-	}
-.panel2 {
-	z-index: 1;
-	position: relative;
-	}
-.panel-latent {
-	visibility: hidden;
-	}
-.panel-active{
-	visibility: visible;
-	}	
-	
-</style>
-</head>
-<body>
-	
-<button id="killhim">Kill Him</button>
-<button id="sparehim">Spare Him</button>
-
-<img id="killedhim" class="panel-latent panel1" src="deadman.jpg">
-<img id="sparedhim" class="panel-latent panel2" src="livingman.jpg">
-
-</body>
-</html>-->
