@@ -1,4 +1,38 @@
+<!DOCTYPE html>
 <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#div1").click(function(){
+    $("#div2").addClass("important blue");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<button id="div1">This is some text.</button>
+<div id="div2">This is some text.</div>
+<br>
+
+<button>Add classes to first div element</button>
+
+</body>
+</html>
+
+
+<!--<html>
 <head>
 <script src="jquery-3.6.0.js"></script>
 
@@ -40,4 +74,4 @@ $("#sparehim").click(function(){
 <img id="sparedhim" class="panel-latent panel2" src="livingman.jpg">
 
 </body>
-</html>
+</html>-->
