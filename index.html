@@ -4,30 +4,43 @@
 <script src="jquery-3.6.0.js"></script>
 <script>
 $(document).ready(function(){
-  $("#div1").click(function(){
-    $("#div2").addClass("important blue");
-  });
+  $("#killhim").click(function(){ 
+	$("#killedhim").addClass("panel-active");
+	$("#killedhim").removeClass("panel-latent");
+	});
+  $("#sparehim").click(function(){ 
+	$("#sparedhim").addClass("panel-active"); 
+	$("#sparedhim").removeClass("panel-latent");
+	});
 });
 </script>
 <style>
-.important {
-  font-weight: bold;
-  font-size: xx-large;
-}
-
-.blue {
-  color: blue;
+.panel1 {
+	z-index: 0;
+	position: absolute;
+	}
+.panel2 {
+	z-index: 1;
+	position: relative;
+	}
+.panel-latent {
+	visibility: hidden;
+	}
+.panel-active{
+	visibility: visible;
+	}	
 }
 </style>
 </head>
 <body>
 
-<button id="div1">This is some text.</button>
-<div id="div2">This is some text.</div>
-<br>
-
-<button>Add classes to first div element</button>
-
+<button id="killhim">Kill Him</button>
+<button id="sparehim">Spare Him</button>
+<div id="killedhim" class="panel-latent panel1">
+	<img src="deadman.jpg"></div>
+<div id="sparedhim" class="panel-latent panel2">
+	<img src="livingman.jpg"></div>
+	
 </body>
 </html>
 
