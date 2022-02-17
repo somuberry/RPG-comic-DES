@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<button id=”killhim”>Kill Him</button>
+<button id=”sparehim”>Spare Him</button>
+
+<img id=”killedhim” class=”panel-latent panel1” src=”deadman.jpg”>
+<img id=”sparedhim” class=”panel-laten panel2t” src=”livingman.jpg”>
+
+<script>
+if $("#killhim").click(function(){ 
+	$("#killedhim").addClass(“panel-active”);
+	$("#killedhim").removeClass(“panel-latent”)
+	}
+if $("#sparehim").click(function(){ 
+	$("#sparedhim").addClass(“panel-active”); 
+	$("#sparedhim").removeClass(“panel-latent”)
+	}
+</script>
+
+<style>
+.panel1 {
+	z-index: 0;
+	position: absolute;
+	}
+.panel2 {
+	z-index: 1;
+	position: relative;
+	}
+.panel-latent {
+	visibility: hidden;
+	}
+.panel-active{
+	visibility: visible;
+	}
+</style>
+</body>
+</html>
