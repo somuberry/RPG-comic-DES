@@ -7,10 +7,12 @@ $(document).ready(function(){
   $("#killhim").click(function(){ 
 	$("#killedhim").addClass("panel-active");
 	$("#killedhim").removeClass("panel-latent");
+	$("button").hide();
 	});
   $("#sparehim").click(function(){ 
 	$("#sparedhim").addClass("panel-active"); 
 	$("#sparedhim").removeClass("panel-latent");
+	$("button").hide();
 	});
 });
 </script>
