@@ -10,6 +10,8 @@ $(document).ready(function(){
 	$("#killedhim").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#sparehim").addClass("button-latent");
 	$("#sparehim").removeClass("button-active");
 	  
 	$("#revivehim").addClass("button-active");
@@ -23,6 +25,8 @@ $(document).ready(function(){
 	$("#sparedhim").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#killhim").addClass("button-latent");
 	$("#killhim").removeClass("button-active");
 	  
 	$("#acceptgoods").addClass("button-active");
@@ -36,6 +40,8 @@ $(document).ready(function(){
 	$("#revivedhim").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#payfamily").addClass("button-latent");
 	$("#payfamily").removeClass("button-active");
 	});
 	
@@ -44,6 +50,8 @@ $(document).ready(function(){
 	$("#paidfamily").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#revivehim").addClass("button-latent");
 	$("#revivehim").removeClass("button-active");
 	});	
 		
@@ -52,6 +60,8 @@ $(document).ready(function(){
 	$("#acceptedgoods").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#imallergic").addClass("button-latent");
 	$("#imallergic").removeClass("button-active");
 	});
 	
@@ -60,6 +70,8 @@ $(document).ready(function(){
 	$("#areallergic").removeClass("panel-latent");
 	  
 	$(this).addClass("button-latent");
+	$(this).removeClass("button-active");
+	$("#revivehim").addClass("button-latent");
 	$("#revivehim").removeClass("button-active");
 	});	
 });
@@ -87,32 +99,48 @@ $(document).ready(function(){
 	}
 .button-active {
 	visibility: visible;
+.div1 {
+	position: absolute;
+	z-index: 0;
+	}
+.div2 {
+	position: absolute;
+	z-index: 0;
+	}
+.div3 {
+	position: relative;
+	z-index: 1;
 	}
 </style>
 </head>
 <body>
-
+	
+<div class="div1">
 <button id="killhim" class="button-active">Kill Him</button>
 <button id="sparehim" class="button-active">Spare Him</button>
 <div id="killedhim" class="panel-latent panel1">
 	<img class="img" src="deadman.jpg"></div>
 <div id="sparedhim" class="panel-latent panel2">
 	<img class="img" src="livingman.jpg"></div>
-	
-	
+</div>	
+
+<div class="div2">
 <button id="revivehim" class="button-latent">Revive Him</button>
 <button id="payfamily" class="button-latent">Pay His Family</button>
 <div id="revivedhim" class="panel-latent panel1">
 	<img class="img" src="deadman2.jpg"></div>
 <div id="paidfamily" class="panel-latent panel2">
 	<img class="img" src="family.jpg"></div>
-
+</div>
+	
+<div class="div3">
 <button id="acceptgoods" class="button-latent">[Accept Basket]</button>
 <button id="imallergic" class="button-latent">I'm allergic to yeast</button>
 <div id="acceptedgoods" class="panel-latent panel1">
 	<img class="img" src="basket.jpg"></div>
 <div id="areallergic" class="panel-latent panel2">
 	<img class="img" src="goat.jpg"></div>	
+</div>	
 	
 </body>
 </html>
