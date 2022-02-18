@@ -7,13 +7,60 @@ $(document).ready(function(){
   $("#killhim").click(function(){ 
 	$("#killedhim").addClass("panel-active");
 	$("#killedhim").removeClass("panel-latent");
-	$("button").hide();
+	  
+	$(this).addClass("button-latent");
+	$("#sparehim").removeClass("button-active");
+	  
+	$("#revivehim").addClass("button-active");
+	$("#revivehim").removeClass("button-latent");
+	$("#payfamily").addClass("button-active");
+	$("#payfamily").removeClass("button-latent");
 	});
+	
   $("#sparehim").click(function(){ 
 	$("#sparedhim").addClass("panel-active"); 
 	$("#sparedhim").removeClass("panel-latent");
-	$("button").hide();
+	  
+	$(this).addClass("button-latent");
+	$("#killhim").removeClass("button-active");
+	  
+	$("#acceptgoods").addClass("button-active");
+	$("#acceptgoods").removeClass("button-latent");
+	$("#imallergic").addClass("button-active");
+	$("#imallergic").removeClass("button-latent");
 	});
+	
+  $("#revivehim").click(function(){ 
+	$("#revivedhim").addClass("panel-active");
+	$("#revivedhim").removeClass("panel-latent");
+	  
+	$(this).addClass("button-latent");
+	$("#payfamily").removeClass("button-active");
+	});
+	
+  $("#payfamily").click(function(){ 
+	$("#paidfamily").addClass("panel-active"); 
+	$("#paidfamily").removeClass("panel-latent");
+	  
+	$(this).addClass("button-latent");
+	$("#revivehim").removeClass("button-active");
+	});	
+		
+  $("#acceptgoods").click(function(){ 
+	$("#acceptedgoods").addClass("panel-active");
+	$("#acceptedgoods").removeClass("panel-latent");
+	  
+	$(this).addClass("button-latent");
+	$("#imallergic").removeClass("button-active");
+	});
+	
+  $("#imallergic").click(function(){ 
+	$("#areallergic").addClass("panel-active"); 
+	$("#areallergic").removeClass("panel-latent");
+	  
+	$(this).addClass("button-latent");
+	$("#revivehim").removeClass("button-active");
+	});	
 });
 </script>
 <style>
@@ -34,16 +81,37 @@ $(document).ready(function(){
 .img {
 	max-width: 800px;
 	}
+.button-latent {
+	visibility: hidden;
+	}
+.button-active {
+	visibility: visible;
+	}
 </style>
 </head>
 <body>
 
-<button id="killhim">Kill Him</button>
-<button id="sparehim">Spare Him</button>
+<button id="killhim" class="button-active">Kill Him</button>
+<button id="sparehim" class="button-active">Spare Him</button>
 <div id="killedhim" class="panel-latent panel1">
 	<img class="img" src="deadman.jpg"></div>
 <div id="sparedhim" class="panel-latent panel2">
 	<img class="img" src="livingman.jpg"></div>
+	
+	
+<button id="revivehim" class="button-latent">Revive Him</button>
+<button id="payfamily" class="button-latent">Pay His Family</button>
+<div id="revivedhim" class="panel-latent panel1">
+	<img class="img" src="deadman2.jpg"></div>
+<div id="paidfamily" class="panel-latent panel2">
+	<img class="img" src="family.jpg"></div>
+
+<button id="acceptgoods" class="button-latent">[Accept Basket]</button>
+<button id="imallergic" class="button-latent">I'm allergic to yeast</button>
+<div id="acceptedgoods" class="panel-latent panel1">
+	<img class="img" src="basket.jpg"></div>
+<div id="areallergic" class="panel-latent panel2">
+	<img class="img" src="goat.jpg"></div>	
 	
 </body>
 </html>
